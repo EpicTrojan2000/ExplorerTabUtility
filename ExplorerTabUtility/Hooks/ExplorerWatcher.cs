@@ -988,8 +988,8 @@ public class ExplorerWatcher : IHook
             .Select(g => g.Last())
             .ToArray();
         
-        // TakeLast 100
-        SettingsManager.ClosedWindows = distinctItems.Skip(Math.Max(0, distinctItems.Length - 100)).ToArray();
+        // TakeLast 300
+        SettingsManager.ClosedWindows = distinctItems.Skip(Math.Max(0, distinctItems.Length - 300)).ToArray();
     }
 
     public void Dispose()
